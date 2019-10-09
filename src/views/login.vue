@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         login(){
-            this.$router.push('/home');
+            this.$router.push('/home/main');
             Toast({
                 message: '登录成功',
                 position: 'bottom',
