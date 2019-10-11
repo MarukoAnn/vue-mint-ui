@@ -49,23 +49,27 @@ export default {
         overflow-x: hidden;
         .header{
         //  wi;
+          height: 40px;
         }
         .content{
-          height: 90vh;
+        //   margin-top: 40px;
+          height: 80vh;
           background-color: #fff;
+        //    margin-top: 40px;
         }
         .buttom{
-
+          height: 40px;
         }
         .v-enter {
             opacity: 0;
             transform: translateX(100%);
+            position: absolute;
         }
         .v-leave-to {
             opacity: 0;
             transform: translateX(-100%);
             position: absolute;
-            top: 0;
+            top: 35px;
         }
         .v-enter-active, .v-leave-active{
             transition: 1000ms all ease;

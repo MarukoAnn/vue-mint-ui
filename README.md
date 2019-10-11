@@ -83,3 +83,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 4、使用 v-for 循环渲染 每个 item 项
 ```
 ## 改造九宫格
+
+## 实现新闻资讯列表  点击跳转到新闻详情
+- 1、把列表中的每一项改造为 router-link, 同时, 在跳转的时候应该提 供唯一的Id标识符
+- 2、创建新闻详情的组件页面，NewsInfo.vue
+- 3、在 路由模块中，将新闻详情的 路由地址 和组件页面对应起来
+
+## 单独封装一个 comment.vue 组件模板

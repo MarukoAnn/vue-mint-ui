@@ -7,9 +7,11 @@
         </mt-swipe>
     
         <ul class="mui-table-view mui-grid-view mui-grid-9">
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <router-link to="main/newsList">
                     <img src="../../assets/menu1.png" alt="">
-                    <div class="mui-media-body">新闻资讯</div></a>
+                    <div class="mui-media-body">新闻资讯</div>
+                </router-link>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
             
@@ -36,6 +38,7 @@
     </div>
 </template>
 <script>
+import { Toast } from 'mint-ui';
 export default {
     name: 'mainpage',
     data() {
@@ -48,11 +51,12 @@ export default {
     },
     methods: {
         getBanner() {
-            this.$http.post('http://127.0.0.1:8080/getImageList').then(
+            this.$http.post('getImageList').then(
                 result => {
-                    if(result.status === 200) {
-                      console.log(result.body);
-                      this.images = result.body;
+                    if(result.body.status === '1000') {
+                      this.images = result.body.values;
+                    }else {
+                        Toast('请求失败')
                     }
                 }
             )

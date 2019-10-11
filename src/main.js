@@ -10,11 +10,19 @@ import VueResource from 'vue-resource'
 import 'mint-ui/lib/style.css'
 // 导入 bootstrap 样式包
 import 'bootstrap/dist/css/bootstrap.css'
-import '../node_modules/mui/css/mui.min.css'
-import '../node_modules/mui/css/icons-extra.css'
+import './assets/mui/css/mui.min.css'
+import './assets/mui/css/icons-extra.css'
+// 导入格式化时间组件
+import moment from 'moment'
 Vue.use(MintUI)
 Vue.use(VueResource)
 Vue.config.productionTip = false
+// 定义全局的过滤器
+Vue.filter('dateFormat', function (dataStr, pattern = "YYYY-MM-DD HH:mm:ss"){
+   moment(dataStr).format(pattern)
+})
+// 设置请求的根路径
+Vue.http.options.root = 'http://127.0.0.1:8081';
 
 new Vue({
   router,
