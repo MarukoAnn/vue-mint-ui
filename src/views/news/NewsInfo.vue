@@ -10,13 +10,13 @@
         <div class="content" >
             {{data.content}}
         </div>
-        <comment-box></comment-box>
+        <comment-box :id="this.id"></comment-box>
     </div>
 </template>
 <script>
 import {Toast} from 'mint-ui'
 // 导入 评论子组件
-import comment from '../components/comment'
+import comment from '../../components/comment'
 export default {
     name: 'newsInfo',
     data() {

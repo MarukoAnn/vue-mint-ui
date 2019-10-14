@@ -7,8 +7,9 @@ import main from './views/tabbar/mainContainer'
 import search from './views/tabbar/searchContainer'
 import shopcar from './views/tabbar/shopcarContainer'
 import member from './views/tabbar/memberContainer'
-import newsList from './views/newsList'
-import newsInfo from './views/NewsInfo'
+import newsList from './views/news/newsList'
+import newsInfo from './views/news/NewsInfo'
+import photoList from './views/photo/PhotoList'
 
 //  此处不加 Vue.use(VueRouter), 后面 所有的组件使用this.$router 则会找不到
 Vue.use(VueRouter)
@@ -23,7 +24,8 @@ const router = new VueRouter({
             {path: 'member', component: member},
             {path: 'shopcar', component: shopcar},
             {path: 'main/newsList', component: newsList},
-            {path: 'main/newsinfo/:id', component: newsInfo}
+            {path: 'main/newsinfo/:id', component: newsInfo},
+            {path: 'main/photolist', component: photoList},
         ]},
         { path: '/login',component: login},
        
