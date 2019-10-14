@@ -47,6 +47,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .mui-table-view {
+        // margin-bottom: 40px;
         li{
            h1 {
              font-size: 14px;

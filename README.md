@@ -89,4 +89,14 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - 2、创建新闻详情的组件页面，NewsInfo.vue
 - 3、在 路由模块中，将新闻详情的 路由地址 和组件页面对应起来
 
-## 单独封装一个 comment.vue 组件模板
+## 单独封装一个 comment.vue 评论子组件
+1、先创建一个单独的 comment.vue 组件模板
+2、在需要使用的 comment 组件的页面中，先手动 导入 comment 组件
+- `import comment form './comment.vue/`
+3、在父组件中，使用 `components` 属性, 将其导入 comment 组件，注册为自己的 子组件
+4、将注册子组件时候的，注册名称，以 便签的形式，在页面引用。
+
+## 实现点击加载更多评论的功能
+1、为加载更多按钮， 绑定点击事件，在事件中， 请求下一页数据
+2、点击加载更多，让pageIndex++， 然后重新调用 this.getComments() 方法重新获取最后一页的数据
+3、为了防止新数据 覆盖老数据的状况，我们需要点击加载更多的时候，每当获取到新的数据，应该让老数据 调用数组的concat(拼接)方法，拼接上新数组

@@ -52,16 +52,15 @@ export default {
           height: 40px;
         }
         .content{
-        //   margin-top: 40px;
-          height: 80vh;
+          height: 89vh;
           background-color: #fff;
-        //    margin-top: 40px;
+          overflow: auto;
         }
         .buttom{
           height: 40px;
         }
         .v-enter {
-            opacity: 0;
+            // opacity: 0;
             transform: translateX(100%);
             position: absolute;
         }

@@ -10,10 +10,13 @@
         <div class="content" >
             {{data.content}}
         </div>
+        <comment-box></comment-box>
     </div>
 </template>
 <script>
 import {Toast} from 'mint-ui'
+// 导入 评论子组件
+import comment from '../components/comment'
 export default {
     name: 'newsInfo',
     data() {
@@ -39,6 +42,9 @@ export default {
             )
         }
     },
+  components: {
+      "comment-box": comment
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -60,6 +66,7 @@ export default {
         .content{
            overflow: auto;
            background: #fff;
+           margin-bottom: 10px;
         }
     }
 </style>
