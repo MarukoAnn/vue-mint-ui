@@ -55,7 +55,7 @@ export default {
                 if(result.body.status === 0){
                     // 1、拼接一个评论属性
                     var cmt = {user_name: '匿名用户',
-                    add_time: Data.now(),
+                    add_time: Date.now(),
                     comment: this.msg.trim()}
                     this.comments.unshift(cmt)
                     this.msg = "";
